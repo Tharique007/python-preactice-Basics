@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script type = "text/javascript">
+            function fun() {
+
+
+               alert ("This is an alert dialog box");
+            }
+      </script>
+   </head>
+
+   <body>
+      <p> Click the following button to see the effect </p>
+      <form>
+         <input type = "button" value = "Click me" onclick = "fun();" />
+      </form>
+
+     <p>Click the button to invoke the confirm().</p>
+
+      <button onclick="myFunction()">Click Here</button>
+
+      <p id="conf"></p>
+    <script>
+    function myFunction() {
+      if (window.confirm("Do you really want to delete?")) {
+      document.getElementById("conf").innerHTML = "you have successfully deleted the file"
+    }
+    }
+    </script>
+   </body>
+</html>

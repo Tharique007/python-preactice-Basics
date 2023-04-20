@@ -1,0 +1,5 @@
+a=int(input(":"))
+b=bin(a)
+#print(type(b))
+#print(b)
+print(b.count("1"))

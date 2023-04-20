@@ -1,40 +1,36 @@
-x_list=[]
-y_list=[]
-result_list1=[]
-result_list2=[]
-from math import sqrt
-for i in range (0,4):
-    x=str(i+1)
-    a,b = input("enter the"+x+" points ").split()
-    x_list.append(int(a))
-    y_list.append(int(b))
-for i in range (0,4):
-    a1=x_list[i]
-    b1=y_list[i]
-    if i<3:
-        a2=x_list[i+1]
-        b2=y_list[i+1]
-    elif i==3:
-        a2 = x_list[i-3]
-        b2 = y_list[i-3]
-    result = ((a2-a1)**2)+((b2-b1)**2)
-    result_list1.append(sqrt(result))
-print(result_list1)
+"""
+Write a code get an integer number as input and print the odd and even digits of the number separately.
 
-for i in range(0,2):
-    a1 = x_list[i]
-    b1 = y_list[i]
-    a2 = x_list[i+2]
-    b2 = y_list[i+2]
-    result = ((a2-a1)**2)+((b2-b1)**2)
-    result_list2.append(sqrt(result))
-print(result_list2)
+Input Description:
+A single line containing an integer.
 
-if result_list1[0] == result_list1[1] == result_list1[2] == result_list1[3] != 0 and result_list1[0] == result_list1[1] == result_list1[2] == result_list1[3]:
-    if result_list2[0] == result_list2[1]:
-        print("yes")
+Output Description:
+Print the even and odd integers of the integer in a separate line.
+
+Sample Input :
+1234
+Sample Output :
+2 4
+1 3
+"""
+a=int(input())
+b=str(a)
+even = []
+odd = []
+even_out=""
+odd_out=""
+for i in b:
+    if int(i)%2==0:
+        even.append(int(i))
     else:
-        print("no")
-else:
-        print("no")
+        odd.append(int(i))
+even.sort()
+odd.sort()
 
+for i in even:
+    even_out = even_out+str(i)+" "
+for j in odd:
+    odd_out = odd_out+str(j)+" "
+
+print(even_out.rstrip())
+print(odd_out.rstrip())

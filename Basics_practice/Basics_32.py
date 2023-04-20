@@ -1,3 +1,14 @@
+"""
+Given 3 numbers A,B,C print 'yes' if they can form the sides of a scalene triangle else print 'no'.
+Input Size : A,B,C <= 100000
+Sample Testcase :
+INPUT
+3 4 5
+OUTPUT
+yes
+"""
+
+
 a1,b1,c1 = input("enter the sides to be checked").split()
 a=int(a1)
 b=int(b1)

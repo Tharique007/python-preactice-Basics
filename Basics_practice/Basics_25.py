@@ -1,8 +1,24 @@
-a1,b2=str(input("Enter the twwo number")).split(" ")
+"""
+Write a code to get 2 integers as input and add the integers without any carry.
+
+Input Description:
+A single line containing 2 integers.
+
+Output Description:
+Print sum of the 2 integers without carry
+
+Sample Input :
+44 66
+Sample Output :
+0
+"""
+
+
+a1,b2=str(input("Enter the two number")).split(" ")
 a= int(a1)
 b= int(b2)
 string =""
-string2=""
+
 
 while (a//10)>0 and (b//10)>0:
     if a>9 and b>9:
@@ -14,19 +30,15 @@ while (a//10)>0 and (b//10)>0:
         a= a//10
         b= b//10
 
+
 if (a+b) > 9:
     string = string + str((a+b)%10)
 else:
     string = string + str((a + b))
 
-x = len(string)+1
-for i in range(-1,-x,-1):
-    string2 = string2 + string[i]
 
-print(int(string2))
+print(int(string[::-1]))
 
-string3=""
-for i in string[::-1]:
-    string3 =string3+i
 
-print(int(string3))
+
+
